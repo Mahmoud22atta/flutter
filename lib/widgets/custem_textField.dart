@@ -4,21 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/consts/const_color.dart';
 
 class CustemTextfield extends StatelessWidget {
-  const CustemTextfield({super.key});
-
+  const CustemTextfield({super.key, required this.hinte, this.maxLines = 1});
+  final String hinte;
+  final int maxLines;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 50, left: 12, right: 12),
-      child: TextField(
-        cursorColor: kPrimaryColor,
-        decoration: InputDecoration(
-            enabledBorder: buildBorder(),
-            focusedBorder: buildBorder(kPrimaryColor),
-            hintText: 'Title',
-            hintStyle: TextStyle(color: kPrimaryColor),
-            border: buildBorder()),
-      ),
+    return TextField(
+      maxLines: maxLines,
+      cursorColor: kPrimaryColor,
+      decoration: InputDecoration(
+          enabledBorder: buildBorder(),
+          focusedBorder: buildBorder(kPrimaryColor),
+          hintText: hinte,
+          hintStyle: const TextStyle(color: kPrimaryColor),
+          border: buildBorder()),
     );
   }
 }
