@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class CustemSearhIcon extends StatelessWidget {
   const CustemSearhIcon({
     super.key,
+    required this.icon,
   });
-
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,7 +14,7 @@ class CustemSearhIcon extends StatelessWidget {
           borderRadius: BorderRadius.circular(8)),
       height: 40,
       width: 40,
-      child: const Center(child: Icon(Icons.search)),
+      child: Center(child: Icon(icon)),
     );
   }
 }
