@@ -15,7 +15,7 @@ class CustemAppar extends StatelessWidget {
         ),
         Spacer(),
         CustemSearhIcon(
-          icon: Icons.search,
+          icon: icon,
         )
       ],
     );
