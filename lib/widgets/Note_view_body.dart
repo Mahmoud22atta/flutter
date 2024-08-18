@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:notes_app/widgets/custem_appar.dart';
-import 'package:notes_app/widgets/custem_searh_icon.dart';
 import 'package:notes_app/widgets/note_list_view.dart';
 
 class NoteViewBody extends StatelessWidget {
